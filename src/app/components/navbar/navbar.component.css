@@ -63,3 +63,40 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0.5rem 1vw;
+  }
+  .navbar__logo img {
+    height: 36px;
+    width: 36px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    align-items: flex-start;
+  }
+  .navbar__link {
+    font-size: 15px;
+    padding: 1px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0.2rem 0.5vw;
+  }
+  .navbar__logo img {
+    height: 28px;
+    width: 28px;
+  }
+  .navbar__link {
+    font-size: 13px;
+  }
+}
