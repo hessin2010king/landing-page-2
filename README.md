@@ -1,27 +1,154 @@
-# LandingPage2
+# Modern Furniture Landing Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+A sophisticated, responsive landing page built with Angular for a modern furniture brand. This standalone application showcases elegant furniture designs, interior projects, and brand aesthetics.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This landing page utilizes Angular's standalone components architecture, featuring an elegant and luxurious design perfect for furniture and interior design brands. The page incorporates smooth animations, parallax effects, and a refined color palette that emphasizes the premium nature of the furniture products.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Elegant responsive design (Mobile, Tablet, Desktop)
+- Custom font integration (Angkor-Regular)
+- Parallax scrolling effects
+- Modern component architecture
+- Premium UI/UX design
+- Interactive elements
+- Optimized performance
 
-## Build
+## Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Complete Landing Page
+![Full Landing Page](src/assets/screenshots/furniture-landing-page.png)
+*Comprehensive view of the modern furniture landing page showcasing elegant design and premium aesthetics*
 
-## Running unit tests
+### Hero Section
+![Hero Section](src/assets/screenshots/furniture-hero-section.png)
+*Striking hero section featuring premium furniture with overlay effects and compelling call-to-action*
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Our Projects
+![Our Projects Section](src/assets/screenshots/furniture-our-projects-section.png)
+*Gallery of completed interior design projects and furniture installations*
 
-## Running end-to-end tests
+### Contact & Footer
+![Contact and Footer Section](src/assets/screenshots/furniture-contact-and-footer-section.png)
+*Professional contact form and comprehensive footer with brand information*
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Components Structure
 
-## Further help
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── navbar/          # Navigation with logo
+│   │   ├── hero-section/    # Main showcase area
+│   │   ├── about-us/        # Company information
+│   │   ├── contact/         # Contact form
+│   │   └── footer/          # Site footer
+│   └── ...
+└── assets/
+    ├── images/
+    │   ├── hero-main.png
+    │   ├── hero-overlay.png
+    │   ├── about-sofa.png
+    │   ├── about-interior.png
+    │   ├── about-decorate.png
+    │   ├── contact-image.png
+    │   └── logo.svg
+    ├── font/
+    │   └── Angkor-Regular.ttf
+    └── screenshots/
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technology Stack
+
+- Angular (Latest Version)
+- Standalone Components
+- CSS Variables & Custom Properties
+- Responsive Design
+- Custom Typography
+- Modern JavaScript/TypeScript
+
+## Color Scheme
+
+- Primary Color: #2C3639 (Deep Charcoal)
+- Secondary Color: #A27B5C (Warm Brown)
+- Accent Color: #DCD7C9 (Soft Cream)
+- Text Color: #3F4E4F (Muted Green-Gray)
+
+## Getting Started
+
+1. Clone the repository
+```bash
+git clone [repository-url]
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run development server
+```bash
+ng serve
+```
+
+4. Open browser and navigate to
+```
+http://localhost:4200
+```
+
+## Customization
+
+### Assets
+- Replace images in `src/assets/images/`
+- Update logo: `logo.svg`
+- Hero images: `hero-main.png`, `hero-overlay.png`
+- About section: `about-sofa.png`, `about-interior.png`, `about-decorate.png`
+- Contact: `contact-image.png`
+
+### Typography
+- Custom font in `src/assets/font/`
+- Font variables in global CSS
+
+### Styling
+- Global styles in `src/styles.css`
+- Component-specific styles in respective folders
+- CSS variables for easy theme customization
+
+## Build for Production
+
+```bash
+ng build --configuration=production
+```
+
+## Performance Features
+
+- Lazy loaded images
+- Optimized assets
+- Efficient component architecture
+- Minimal third-party dependencies
+- Responsive image loading
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+[MIT License](LICENSE)
+
+## Contact
+
+For any queries or support, please open an issue in the repository.

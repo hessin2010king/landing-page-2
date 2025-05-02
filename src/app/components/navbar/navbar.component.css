@@ -15,12 +15,50 @@
   padding: 0 60px;
   border-bottom: 2px solid #222;
   font-family: var(--font-main);
+  position: relative;
 }
 
 .navbar__logo img {
   height: 48px;
   width: 48px;
   object-fit: contain;
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.navbar__toggle-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--primary-text);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.navbar__toggle-icon::before,
+.navbar__toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: var(--primary-text);
+  left: 0;
+  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+
+.navbar__toggle-icon::before {
+  top: -8px;
+}
+
+.navbar__toggle-icon::after {
+  bottom: -8px;
 }
 
 .navbar__menu {
@@ -50,41 +88,62 @@
 
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
     padding: 1rem 2vw;
   }
+  
+  .navbar__toggle {
+    display: block;
+  }
+  
   .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-bg);
+    display: none;
     flex-direction: column;
     gap: 1.2rem;
-    width: 100%;
-    margin-top: 0.5rem;
-    align-items: flex-start;
+    padding: 1rem 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__toggle[aria-expanded="true"] .navbar__toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .navbar__toggle[aria-expanded="true"] .navbar__toggle-icon::before {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .navbar__toggle[aria-expanded="true"] .navbar__toggle-icon::after {
+    bottom: 0;
+    transform: rotate(90deg);
   }
 }
 
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
     padding: 0.5rem 1vw;
   }
+  
   .navbar__logo img {
     height: 36px;
     width: 36px;
   }
+  
   .navbar__menu {
-    flex-direction: column;
     gap: 0.7rem;
-    width: 100%;
-    margin-top: 0.5rem;
-    align-items: flex-start;
   }
+  
   .navbar__link {
     font-size: 15px;
-    padding: 1px 0;
   }
 }
 
@@ -92,10 +151,12 @@
   .navbar {
     padding: 0.2rem 0.5vw;
   }
+  
   .navbar__logo img {
     height: 28px;
     width: 28px;
   }
+  
   .navbar__link {
     font-size: 13px;
   }
